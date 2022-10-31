@@ -65,3 +65,12 @@ data class NumberGuessed(val number: Int, val timeElapsed: Int)
 This class is then instantiated within the MainActivity as an object.
 <br>
 On guessing correctly, the number guessed and the time taken are stored in this object and pushed to a Mutable List
+
+## CI/CD using Docker (Optional, to download all tools)
+
+Using an Android Dockerfile installs Android components, sdk, gradle, and after that, we can build our Android App, test, jacoco report, lint, etc. 
+
+### Running the docker file
+```
+$docker build -t android-build:android-gradle
+```
