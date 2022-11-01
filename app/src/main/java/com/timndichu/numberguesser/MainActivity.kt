@@ -26,7 +26,6 @@ import android.widget.TextView
 import androidx.core.view.isVisible
 import java.util.*
 
-private const val TAG = "MainActivity"
 private const val APPBAR_TITLE = "Number Guesser"
 
 class MainActivity : AppCompatActivity() {
@@ -93,7 +92,6 @@ class MainActivity : AppCompatActivity() {
     //    set new random number
     private fun generateRandomNumber() {
         randomNumber = (1..20).random()
-        Log.i(TAG, "$randomNumber")
     }
 
 
@@ -133,10 +131,7 @@ class MainActivity : AppCompatActivity() {
         tvTotalCorrectGuesses.text = counter.toString()
         val numGuessedObj = NumberGuessed(numberGuessed, timeTakenMs)
         numbersList.add(numGuessedObj)
-        for (element in numbersList) {
-            println(element)
-            Log.d(TAG, element.toString())
-        }
+
         disableSubmitButton()
         btnStart.isVisible = true
         btnStart.text = "Play Again?"
